@@ -19,6 +19,10 @@ function checkx()
             if(btn[a].innerText===btn[b].innerText && btn[b].innerText===btn[c].innerText)
             {
                 win.innerHTML = `${btn[a].innerHTML} is WINNER`;
+                for(let j = 0;j<btn.length;j++)
+                {
+                    btn[j].disabled = true;
+                }
                 return;
             }
             
@@ -31,11 +35,11 @@ for(let i = 0;i<btn.length;i++)
     {
         if(che === true)
         {
-            btn[i].innerText = `X`;
+            btn[i].innerHTML = `X`;
             che = false;
         }
         else{
-            btn[i].innerText = `O`;
+            btn[i].innerHTML = `O`;
             che = true;
         }
        
